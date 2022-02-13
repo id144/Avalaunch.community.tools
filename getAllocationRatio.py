@@ -2,6 +2,7 @@ import re
 import sys
 import unicodedata
 import json
+import os
 import requests
 import time
 from web3 import Web3
@@ -150,11 +151,11 @@ def main(_projectArg=""):
         if ("0xe9d8479e") not in _tx["input"]:
             continue
         try:
-            if j > 50:
+            if j > 150:
                 break
             _sales.append(getAccountInfo(_tx["from"], selectedProject["id"]))
             j = j+1
-            time.sleep(0.5)
+            time.sleep(0.3)
         except Exception as e:
             print(e)
 
