@@ -34,7 +34,7 @@ def getProjectsInfo():
 
 def getAccountInfo(_address):    
     try:
-        profileURL = 'https://avalaunch-kyc.herokuapp.com/api/v1/wallet/' + _address +  '+?allocations=true&transactions=false'
+        profileURL = 'https://avalaunch-kyc.herokuapp.com/api/v1/wallet/' + _address +  '?allocations=true&transactions=false'
         r = apiSession.get(url=profileURL, timeout=10)
         _APIinfo = r.json()     
         return _APIinfo
@@ -46,8 +46,8 @@ def newEvent(_title, _description, datebegin, dateend):
     _e = Event()
     _e.name = _title
     _e.description = _description
-    _e.begin = (datetime.utcfromtimestamp(datebegin).strftime('%Y-%m-%d %H:%M:%S')) 
-    _e.end = (datetime.utcfromtimestamp(dateend).strftime('%Y-%m-%d %H:%M:%S')) 
+    _e.begin = (datetime.utcfromtimestamp(int(datebegin)).strftime('%Y-%m-%d %H:%M:%S')) 
+    _e.end = (datetime.utcfromtimestamp(int(dateend)).strftime('%Y-%m-%d %H:%M:%S')) 
     return _e
 
 def nameFromID(id, projects):
