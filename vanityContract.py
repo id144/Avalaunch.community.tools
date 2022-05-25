@@ -15,7 +15,6 @@
 # eth addr: 0xda74cb644eca35c56ae5f5d315bdc642e8b37716
 # nonce: 5
 # eth addr: 0x0xABCb4D8A465Cd7eA98e4b3711060DAD74AA80FC1
-# nonce = 5
 # 
 # result transaction:
 # https://rinkeby.etherscan.io/tx/0xefc1122febf351b694ef9f66bf197573ebcb4a02c23cd08bff0f69778a1ec2b9
@@ -24,6 +23,7 @@
 # checksummed: 0xABCb4D8A465Cd7eA98e4b3711060DAD74AA80FC1
 
 vanity_prefix = '0xABC'
+nonce = 5
 
 import rlp
 #pip install pysha3
